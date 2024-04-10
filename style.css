@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+#sidebar {
+    width: 100px;
+    min-width: 80px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.sidebar-logo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-nav {
+    padding: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    width: 100%;
+    transition: padding-left 0.3s;
+}
+
+.sidebar-link.active {
+    padding-left: 20px;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid white;
+}
+
+
+.sidebar-item {
+    position: relative;
+    width: 100%;
+}
+
+/*.sidebar-item:first-child .sidebar-link {
+    margin-top: 40px; 
+)*/
+
+
+#sidebar.expand a.sidebar-link {
+    justify-content: center;
+    padding-left: 20px;
+    flex-direction: row;
+    text-align: left;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+
+
+.product-img-custom {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+
+.text-category {
+    font-weight: 900;
+    font-weight: bold;
+}
+
+.sidebar-link.active,
+.sidebar-link.active:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.btn-custom-position {
+    display: block;
+    margin: 3rem auto;
+    background-color: black;
+    border: 2px solid black;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+
+.btn-custom-position:hover {
+    background-color: #333;
+    color: white;
+    border: 2px solid #333;
+}
+
+.btn-edit, .btn-search {
+    background-color: black!important;
+    border-color: black!important;
+    color: white !important;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+
+.btn-save-product {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    font-family: Montserrat;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+
+.btn-save-product:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff
+}
+
+
+.btn-save-product:active {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.inventory-title {
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 40px;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    width: auto;
+    margin: 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+/* Customer feedback form */
+.feedback-section {
+    max-width: 800px;
+    margin: 50px auto;
+    /* Added margin-top */
+}
+
+.feedback-section h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.btn-feedback {
+    display: block;
+    margin: 3rem auto;
+    background-color: black;
+    border: 2px solid black;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    max-width: 200px;
+    width: 100%;
+
+}
+
+.btn-feedback:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.feedback-section {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    text-align: left;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+#sidebar {
+    width: 100px;
+    min-width: 80px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.sidebar-logo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-nav {
+    padding: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    width: 100%;
+    transition: padding-left 0.3s;
+}
+
+.sidebar-link.active {
+    padding-left: 20px;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid white;
+}
+
+
+.sidebar-item {
+    position: relative;
+    width: 100%;
+}
+
+/*.sidebar-item:first-child .sidebar-link {
+    margin-top: 40px; 
+)*/
+
+
+#sidebar.expand a.sidebar-link {
+    justify-content: center;
+    padding-left: 20px;
+    flex-direction: row;
+    text-align: left;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+
+
+.product-img-custom {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+
+.text-category {
+    font-weight: 900;
+    font-weight: bold;
+}
+
+.sidebar-link.active,
+.sidebar-link.active:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.btn-custom-position {
+    display: block;
+    margin: 3rem auto;
+    background-color: #333 !important;
+    border-color: #333 !important;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+
+.btn-custom-position:hover {
+    background-color: #333;
+    color: white;
+    border: 2px solid #333;
+}
+
+.btn-edit {
+    background-color: #333 !important;
+    border-color: #333 !important;
+    color: white !important;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100px;
+}
+
+
+.btn-save-product {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    font-family: Montserrat;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+
+.btn-save-product:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff
+}
+
+
+.btn-save-product:active {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.inventory-title {
+    font-family: 'Bowlby One SC', sans-serif;
+    font-size: 40px;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    width: auto;
+    margin: 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+/* Customer feedback form */
+.feedback-section {
+    max-width: 800px;
+    margin: 50px auto;
+    /* Added margin-top */
+}
+
+.feedback-section h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.btn-feedback {
+    display: block;
+    margin: 3rem auto;
+    background-color: black;
+    border: 2px solid black;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    max-width: 200px;
+    width: 100%;
+
+}
+
+.btn-feedback:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.feedback-section {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.modal-header h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product_card {
+    width: 250px; /* Set a fixed width for the product card */
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.product_image {
+    width: 100%;
+    height: 200px; /* Set the fixed height of the image container */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.price_stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.price_text {
+    font-size: 0.8rem;
+}
+
+.stock_text {
+    font-size: 0.8rem;
+}
+
+/* Create chatbox like facebook on card */
+.chat_box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.customer_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.admin_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chat_bubble {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.customer_bubble {
+    background-color: #f1f0f0;
+    border: 1px solid #e0e0e0;
+}
+
+.admin_bubble {
+    background-color: #f1f0f0;
+    border: 1px solid #e0e0e0;
+}
+
+/* Create chatbox like facebook on card */
+.chat_box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.customer_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.admin_chat {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chat_bubble {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.customer_bubble {
+    background-color: #2268ff;
+    border: 1px solid #e0e0e0;
+}
+
+.admin_bubble {
+    background-color: #dbdbdb;
+    border: 1px solid #e0e0e0;
+}
+
+.product-details {
+    display: block; /* This ensures the container is block-level, but it's likely unnecessary unless you're changing the display type elsewhere. */
+}
+
+.product-category {
+    display: block; /* Converts span to block-level to ensure it takes up its own line. */
+    font-size: 16px; /* Adjust size as needed. */
+    margin-bottom: 0; /* Removes any space between the category and the product name. */
+}
+
+.card-title {
+    font-weight: bold; /* Makes product name bold. */
+    margin-top: 0; /* Removes space above the product name. */
+    margin-bottom: 2rem; /* Optional: Adjusts space below the product name if needed. */
+    padding-top: 0; /* Ensures there's no padding adding space above the product name. */
+    font-size: 16px;
+}
+
+.price_stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0; /* Ensures there's no additional top margin, can be adjusted if needed */
+}
+
+.product-category, .card-title, .stock_text, .card-text {
+    text-transform: uppercase;
+   
+    /* Additional styles as needed */
+}
+
+/* Base button style */
+.btn-edit, .btn-save-product, .btn-search, .btn-custom-position, .btn-feedback, .btn-danger, .btn-primary  {
+    background-color: black !important;
+    border-color: black !important;
+    color: white !important;
+    font-family: Montserrat !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    font-size: 14px !important;
+}
+
+/* Hover state for all buttons */
+.btn-edit:hover, .btn-save-product:hover, .btn-search:hover, .btn-custom-position:hover, .btn-feedback:hover, .btn-danger:hover, .btn-primary:hover {
+    background-color: #333 !important;
+    border-color: #333 !important;
+}
+
+/* Specifically targeting the 'search-input' class */
+.search-input {
+    border: 1px solid black; /* Adds a black border */
+    outline: 1px solid black; /* Adds a black outline */
+}
+
+.btn-search {
+    width: 100px; /* Example fixed width */
+    height: 38px; /* Example fixed height, adjust to match the height of the input field */
+    padding: 0.375rem 0.9rem;
+   
+}
+
