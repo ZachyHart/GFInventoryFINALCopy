@@ -57,33 +57,33 @@ class CustomerUsers
         ) {
             echo '<script>
                 alert("Please fill out all inputs");
-                window.location.href = "../Customersignup.php";
+                window.location.href = "../CustomerInventory.php";
               </script>';
         }
 
         if (!preg_match("/^[a-zA-Z0-9]*$/", $data['usersUid'])) {
             echo '<script>
                 alert("Invalid username");
-                window.location.href = "../Customersignup.php";
+                window.location.href = "../CustomerInventory.php";
               </script>';
         }
 
         if (!filter_var($data['usersEmail'], FILTER_VALIDATE_EMAIL)) {
             echo '<script>
                 alert("Invalid email");
-                window.location.href = "../Customersignup.php";
+                window.location.href = "../CustomerInventory.php";
               </script>';
         }
 
         if (strlen($data['usersPwd']) < 6) {
             echo '<script>
                 alert("Invalid password");
-                window.location.href = "../Customersignup.php";
+                window.location.href = "../CustomerInventory.php";
               </script>';
         } else if ($data['usersPwd'] !== $data['pwdRepeat']) {
             echo '<script>
                 alert("Passwords don\'t match");
-                window.location.href = "../Customersignup.php";
+                window.location.href = "../CustomerInventory.php";
               </script>';
         }
 
@@ -91,7 +91,7 @@ class CustomerUsers
         if ($this->userModel->findUserByEmailOrUsername($data['usersEmail'], $data['usersName'], $data['role'])) {
             echo '<script>
                 alert("Username or email already taken");
-                window.location.href = "../Customersignup.php";
+                window.location.href = "../CustomerInventory.php";
               </script>';
         }
 
@@ -205,7 +205,7 @@ class CustomerUsers
         unset($_SESSION['usersEmail']);
         unset($_SESSION['role']);
         session_destroy();
-        redirect("../CustomerFeedback.php");
+        redirect("../CustomerInventory.php");
     }
 }
 

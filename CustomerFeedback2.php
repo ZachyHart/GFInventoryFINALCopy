@@ -40,7 +40,7 @@
                 <!-- Add more sidebar items here -->
             </ul>
             <div class="sidebar-footer">
-                <a href="Customerlogin.php" class="sidebar-link" title="Logout">
+                <a href="CustomerInventory.php" class="sidebar-link" title="Logout">
                     <i class="lni lni-exit"></i>
                 </a>
             </div>

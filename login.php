@@ -68,6 +68,7 @@ include_once './helpers/session_helper.php';
 </body>
 <?php
     if(isset($_SESSION['flash-msg'])){
+        $msg = $_SESSION['flash-msg'];
         if($msg == 'invalid-token'){
             echo"
             <script>

@@ -3,10 +3,7 @@ require_once 'helpers/conn_helpers.php';
 include_once './helpers/session_helper.php';
 
 // check if user is logged in, and check if user is an admin
-if (!isset($_SESSION["usersName"]) || $_SESSION["role"] !== "user") {
-    header("Location: customerlogin.php");
-    exit();
-}
+
 ?>
 
 <!DOCTYPE html>

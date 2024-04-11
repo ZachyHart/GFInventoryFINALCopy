@@ -6,7 +6,7 @@ if (!isset($_SESSION["usersName"]) || $_SESSION['role'] != 'user') {
     echo '<script>
     alert("You are not authorized to access this page", ' . $_SESSION["role"] . ');
     </script>';
-    header("Location: customerlogin.php");
+    header("Location: CustomerInventory.php");
     exit();
 }
 ?>

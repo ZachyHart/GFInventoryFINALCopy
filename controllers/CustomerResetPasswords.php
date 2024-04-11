@@ -159,7 +159,7 @@ class CustomerResetPasswords{
     
         echo '<script>
                 alert("Password Updated");
-                window.location.href = "../Customerlogin.php";
+                window.location.href = "../CustomerInventory.php";
               </script>';
         exit;
     }
