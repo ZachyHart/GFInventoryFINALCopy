@@ -72,7 +72,7 @@ include_once './helpers/session_helper.php';
             <div class="col-md-6 mx-auto">
             <form method="GET" class="d-flex align-items-center">
                         <input type="text" class="form-control me-2" name="search" placeholder="Search products..."required>
-                        <button type="submit" class="btn btn-search">Search</button>
+                        <button type="submit" class="btn btn-search1">Search</button>
                     </form>
                 </div>
             </div>
