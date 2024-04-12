@@ -590,7 +590,7 @@ body {
 }
 
 .product_card {
-    width: 250px; /* Set a fixed width for the product card */
+    width: 250px; 
     padding: 1rem;
     margin: 1rem;
     border: 1px solid #e0e0e0;
@@ -601,8 +601,8 @@ body {
 
 .product_image {
     width: 100%;
-    height: 200px; /* Set the fixed height of the image container */
-    object-fit: cover; /* Maintain aspect ratio and cover container */
+    height: 200px; 
+    object-fit: cover; 
     border-radius: 10px;
     margin-bottom: 1rem;
 }
@@ -622,7 +622,7 @@ body {
     font-size: 0.8rem;
 }
 
-/* Create chatbox like facebook on card */
+
 .chat_box {
     display: flex;
     flex-direction: column;
@@ -662,7 +662,7 @@ body {
     border: 1px solid #e0e0e0;
 }
 
-/* Create chatbox like facebook on card */
+
 .chat_box {
     display: flex;
     flex-direction: column;
@@ -703,20 +703,20 @@ body {
 }
 
 .product-details {
-    display: block; /* This ensures the container is block-level, but it's likely unnecessary unless you're changing the display type elsewhere. */
+    display: block; 
 }
 
 .product-category {
-    display: block; /* Converts span to block-level to ensure it takes up its own line. */
-    font-size: 16px; /* Adjust size as needed. */
-    margin-bottom: 0; /* Removes any space between the category and the product name. */
+    display: block; 
+    font-size: 16px; 
+    margin-bottom: 0; 
 }
 
 .card-title {
-    font-weight: bold; /* Makes product name bold. */
-    margin-top: 0; /* Removes space above the product name. */
-    margin-bottom: 2rem; /* Optional: Adjusts space below the product name if needed. */
-    padding-top: 0; /* Ensures there's no padding adding space above the product name. */
+    font-weight: bold; 
+    margin-top: 0; 
+    margin-bottom: 2rem; 
+    padding-top: 0; 
     font-size: 16px;
 }
 
@@ -724,13 +724,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0; /* Ensures there's no additional top margin, can be adjusted if needed */
+    margin-top: 0; 
 }
 
 .product-category, .card-title, .stock_text, .card-text {
     text-transform: uppercase;
    
-    /* Additional styles as needed */
+    
 }
 
 /* Base button style */
@@ -750,15 +750,15 @@ body {
     border-color: #333 !important;
 }
 
-/* Specifically targeting the 'search-input' class */
+
 .search-input {
-    border: 1px solid black; /* Adds a black border */
-    outline: 1px solid black; /* Adds a black outline */
+    border: 1px solid black; 
+    outline: 1px solid black; 
 }
 
 .btn-search, .btn-search1 {
-    width: 100px; /* Example fixed width */
-    height: 38px; /* Example fixed height, adjust to match the height of the input field */
+    width: 100px; 
+    height: 38px; 
     padding: 0.375rem 0.9rem;
    
 }
@@ -772,15 +772,15 @@ body {
 }
 
  .btn-search1 {
-    margin-top: -8px; /* Moves the button up; adjust the value as needed */
+    margin-top: -8px; 
 }
 
 /* responsiveness of customer side*/
 
-/* Basic styling for small devices */
+
 .inventory-title {
     font-family: 'Bowlby One SC', sans-serif;
-    font-size: 24px; /* Smaller font for mobile devices */
+    font-size: 24px; 
     display: block;
     padding: 0.5rem 1rem;
     margin: 0 auto;
@@ -788,13 +788,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: black;
-    text-align: center; /* Ensure it's centered on smaller screens */
+    text-align: center; 
 }
 
 /* Media query for tablets */
 @media (min-width: 768px) {
     .inventory-title {
-        font-size: 32px; /* Slightly larger font for tablets */
+        font-size: 32px; /
     }
 }
 
@@ -806,16 +806,144 @@ body {
 }
 
 .card-header {
-    background-color: black; /* Sets the background color to black */
-    color: #fff; /* Sets the text color to white for contrast */
-    font-weight: bold; /* Optionally makes the header text bold */
+    background-color: black; 
+    color: #fff; 
+    font-weight: bold; 
 }
 
-/* Specifically targeting the delete button for font color changes */
+
 .btn-delete {
-    color: rgba(255, 0, 0, 0.568) !important; /* Makes the text color red */
+    color: rgba(255, 0, 0, 0.568) !important; 
 }
 
 .btn-delete:hover {
-    text-decoration: underline; /* Underlines the text on hover */
+    text-decoration: underline; 
 }
+
+/* responsiveness of admin side*/
+.product_card {
+    width: 100%; /* Make the width responsive */
+    max-width: 250px; /* Limit maximum width */
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.product_image {
+    width: 100%; /* Ensure image takes full width of the container */
+    height: auto; /* Make height auto to maintain aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 10px;
+}
+
+/* Adjusting text and layout for smaller screens */
+@media (max-width: 768px) {
+    .product_card {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    }
+
+    .card-title, .product-category, .price_stock, .card-text {
+        text-align: center; /* Center-align text for better readability on small screens */
+    }
+
+    .product_image {
+        max-width: 180px; /* Smaller images on smaller screens */
+        height: 180px; /* Fixed height for consistency */
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+/* Adjustments for medium devices like tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    .product_card {
+        max-width: 200px; /* Slightly larger card size for tablets */
+    }
+
+    .product_image {
+        max-width: 200px;
+        height: 200px; /* Larger image size for tablets */
+    }
+}
+
+/* Larger desktops */
+@media (min-width: 992px) {
+    .product_card {
+        max-width: 250px; /* Standard card size for desktops */
+    }
+
+    .product_image {
+        max-width: 250px;
+        height: 250px; /* Largest fixed size for desktop views */
+    }
+}
+
+.btn-edit, .btn-delete {
+    padding: 0.375rem 0.75rem; /* Adjust padding for better touch targets */
+    font-size: 16px; /* Adjust font size for better visibility */
+    margin-top: 0.5rem; /* Add a little top margin for spacing between buttons and text */
+}
+
+/* Increase button size and spacing on smaller screens */
+@media (max-width: 768px) {
+    .btn-edit, .btn-delete {
+        width: 100%; /* Full width for easier access on mobile */
+        padding: 0.5rem; /* Larger padding for better touch targets */
+        margin-top: 0.5rem; /* Ensure space between buttons */
+        margin-bottom: 0.5rem; /* Space below each button */
+    }
+
+    .btn-edit {
+        margin-right: 0; /* Remove right margin if any */
+    }
+
+    .d-flex {
+        flex-direction: column; /* Stack buttons vertically on smaller devices */
+    }
+}
+
+/* Adjustments for medium devices like tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    .btn-edit, .btn-delete {
+        padding: 0.375rem 1rem; /* Slightly larger padding */
+    }
+}
+
+/* Adjustments for desktops */
+@media (min-width: 992px) {
+    .btn-edit, .btn-delete {
+        padding: 0.375rem 1.5rem; /* Comfortable padding for desktop */
+    }
+}
+
+/* Adjustments for mobile phones */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Changes layout to vertical on small devices */
+    }
+
+    .col-md-3, .col-lg-2 {
+        max-width: 100%; /* Allows the image column to take full width */
+        flex: 0 0 100%; /* Adjusts the flex basis to occupy the full width */
+    }
+
+    .product-img-custom {
+        width: 100%; /* Makes the image full width */
+        max-width: 100%; /* Ensures the image does not exceed the card width */
+        height: auto; /* Maintains the aspect ratio */
+        margin-bottom: 1rem; /* Adds some space below the image */
+    }
+
+    .col-md-9, .col-lg-10 {
+        max-width: 100%; /* Allows the content column to take full width */
+        flex: 0 0 100%; /* Adjusts the flex basis to occupy the full width */
+    }
+
+    .search-input {
+        margin-bottom: 1rem; /* Increases the bottom margin for extra space between the input and button */
+    }
+}
+
+

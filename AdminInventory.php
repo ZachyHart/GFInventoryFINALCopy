@@ -326,7 +326,7 @@ if (isset($_GET["editproduct"])) {
                         <input type="hidden" id="delete_product_id" name="product_id">
                         <p class="text-center">Are you sure you want to delete this product?</p>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-danger btn-delete-product">DELETE PRODUCT
+                            <button type="submit" class="btn btn-danger btn-delete-product">YES, DELETE IT!
                                 </button>
                         </div>
                     </form>
