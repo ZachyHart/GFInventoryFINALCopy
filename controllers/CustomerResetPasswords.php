@@ -36,14 +36,14 @@ class CustomerResetPasswords{
         if(empty($usersEmail)){
             echo '<script>
             alert("Please input email");
-            window.location.href = "../Customerreset-password.php";
+            window.location.href = "../CustomerInventory.php";
           </script>';
         }
 
         if(!filter_var($usersEmail, FILTER_VALIDATE_EMAIL)){
             echo '<script>
             alert("Invalid email");
-            window.location.href = "../Customerreset-password.php";
+            window.location.href = "../CustomerInventory.php";
           </script>';
         }
         //Will be used to query the user from the database
@@ -77,7 +77,7 @@ class CustomerResetPasswords{
 
         echo '<script>
         alert("Check your email");
-        window.location.href = "../Customerreset-password.php";
+        window.location.href = "../CustomerInventory.php";
       </script>';
     }
 
