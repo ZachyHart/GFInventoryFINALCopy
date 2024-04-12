@@ -50,7 +50,7 @@
         <input type="password" class="form-control mb-3" name="pwd-repeat" placeholder="Repeat new password..."/>
 
         <div id="button_container" class="text-center mt-3" name="submit">
-                            <button type="submit" button class="btn btn-primary">Change Password</button>
+                            <button type="submit" button class="btn btn-primary">CHANGE PASSWORD</button>
                         </div>
                         </form>
 

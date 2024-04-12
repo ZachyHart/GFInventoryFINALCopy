@@ -27,7 +27,7 @@
                     <div id="logo_container">
                         <img id="logo" src="img/CircularLogo.jpg" alt="Logo" class="img-fluid">
                     </div>
-                    <h1 id="form_header" class="text-center mt-3">Customer Enter New Password</h1>
+                    <h1 id="form_header" class="text-center mt-3">Enter New Password</h1>
                     </div>
 <?php 
     if(empty($_GET['selector']) || empty($_GET['validator'])){
@@ -50,7 +50,7 @@
         <input type="password" class="form-control mb-3" name="pwd-repeat" placeholder="Repeat new password..."/>
 
         <div id="button_container" class="text-center mt-3" name="submit">
-                            <button type="submit" button class="btn btn-primary">Change Password</button>
+                            <button type="submit" button class="btn btn-primary">CHANGE PASSWORD</button>
                         </div>
                         </form>
 

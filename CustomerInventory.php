@@ -61,14 +61,7 @@ include_once './helpers/session_helper.php';
                 </li>
                 <!-- Add more sidebar items here -->
             </ul>
-            <div class="sidebar-footer">
-                <form action="controllers/Customerusers.php" method="post" id="logout">
-                    <input type="hidden" name="type" value="logout">
-                    <a href="javascript:{}" onclick="document.getElementById('logout').submit();" class="sidebar-link" title="Logout" id="logout" type="submit">
-                        <i class="lni lni-exit"></i>
-                    </a>
-                </form>
-            </div>
+           
         </aside>
 
         <div class="main p-3">
@@ -193,7 +186,7 @@ include_once './helpers/session_helper.php';
                                     </div>
 
                                     <p id="create_account_text" class="text-center mt-3">Don't have an account? <br> Create a new
-                                        one <a href="" data-bs-toggle="modal" data-bs-target="#signupModal"> here</a></p>
+                                        one <a href="" class="create-account-link" data-bs-toggle="modal" data-bs-target="#signupModal"> here</a></p>
                                 </div>
                             </form>
                         </div>
@@ -238,7 +231,7 @@ include_once './helpers/session_helper.php';
                                             <button type="submit" id="showConfirmationModal" class="btn btn-primary text-center btn-submit" style="background-color: black; color: white;">SIGN UP</button>
                                         </div>
                                         
-                                        <p id="create_account_text" class="text-center mt-3">Already have an account? <br> Click here to <a href="" data-bs-toggle="modal" data-bs-target="#loginModal"> login</a></p>
+                                        <p id="create_account_text" class="text-center mt-3">Already have an account? <br> Click here to <a href="" class="create-account-link" data-bs-toggle="modal" data-bs-target="#loginModal"> login</a></p>
                                     </div>
                                 </div>
                             </form>
