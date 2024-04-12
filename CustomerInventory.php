@@ -157,7 +157,7 @@ include_once './helpers/session_helper.php';
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header text-center">
-                            <h5 class="modal-title w-100" id="deleteProductModalLabel">Login</h5>
+                            
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
@@ -200,7 +200,7 @@ include_once './helpers/session_helper.php';
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header text-center">
-                            <h5 class="modal-title w-100" id="deleteProductModalLabel">Sign Up</h5>
+                            
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
@@ -246,7 +246,7 @@ include_once './helpers/session_helper.php';
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header text-center">
-                            <h5 class="modal-title w-100" id="deleteProductModalLabel">Forgot Password</h5>
+                           
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 

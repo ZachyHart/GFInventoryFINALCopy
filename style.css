@@ -603,7 +603,7 @@ body {
     width: 100%;
     height: 200px; 
     object-fit: cover; 
-    border-radius: 10px;
+    
     margin-bottom: 1rem;
 }
 
@@ -830,7 +830,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
-}
+} 
 
 .product_image {
     width: 100%; /* Ensure image takes full width of the container */
@@ -922,6 +922,7 @@ body {
 @media (max-width: 768px) {
     .card {
         flex-direction: column; /* Changes layout to vertical on small devices */
+        border-radius: 10px;
     }
 
     .col-md-3, .col-lg-2 {
@@ -934,6 +935,7 @@ body {
         max-width: 100%; /* Ensures the image does not exceed the card width */
         height: auto; /* Maintains the aspect ratio */
         margin-bottom: 1rem; /* Adds some space below the image */
+        border-radius: 10px;
     }
 
     .col-md-9, .col-lg-10 {
@@ -943,6 +945,17 @@ body {
 
     .search-input {
         margin-bottom: 1rem; /* Increases the bottom margin for extra space between the input and button */
+    }
+}
+
+/* Adjusting the product image layout and alignment for smaller screens */
+@media (max-width: 768px) {
+    .product_image {
+        width: 100%;  /* Ensures the image takes the full width of its container */
+        height: auto; /* Maintains the aspect ratio of the image */
+        object-fit: cover; /* Ensures the image covers the area appropriately */
+        margin: 0 auto; /* Centers the image horizontally within its container */
+        display: block; /* Ensures the image is treated as a block-level element */
     }
 }
 

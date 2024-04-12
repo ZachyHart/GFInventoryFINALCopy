@@ -159,3 +159,22 @@ modal-body,
     background-color: #333 !important;
     border-color: #333 !important;
 }
+
+.btn-back {
+    background-color: transparent; /* Remove any background color */
+    border: none; /* Remove the border */
+    padding: 10px; /* Provide some padding around the icon */
+    cursor: pointer; /* Make sure it looks clickable */
+    display: inline-flex; /* Aligns the icon properly */
+    align-items: center; /* Centers the icon vertically */
+    justify-content: center; /* Centers the icon horizontally */
+}
+
+.btn-back i {
+    color: black; /* Change the color of the arrow */
+    font-size: 28px; /* Increase the size of the arrow */
+}
+
+.btn-back:hover i {
+    color: #333; /* Darken the arrow on hover for better UI feedback */
+}

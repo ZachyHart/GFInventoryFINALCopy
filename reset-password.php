@@ -13,6 +13,8 @@ include_once './helpers/session_helper.php';
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Our stylesheet -->
@@ -24,7 +26,11 @@ include_once './helpers/session_helper.php';
             <div id="form_container" class="col-md-6">
                 <div id="form_header_container" class="text-center">
                     <div class="w-100 d-flex">
-                        <a href="./login.php"><button class="btn btn-primary mt-2 text">back</button></a>
+                    <a href="./login.php">
+    <button class="btn btn-back">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+</a>
                     </div>
                     <div id="logo_container">
                         <img id="logo" src="img/CircularLogo.jpg" alt="Logo" class="img-fluid">
