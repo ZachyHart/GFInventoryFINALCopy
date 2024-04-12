@@ -810,3 +810,12 @@ body {
     color: #fff; /* Sets the text color to white for contrast */
     font-weight: bold; /* Optionally makes the header text bold */
 }
+
+/* Specifically targeting the delete button for font color changes */
+.btn-delete {
+    color: rgba(255, 0, 0, 0.568) !important; /* Makes the text color red */
+}
+
+.btn-delete:hover {
+    text-decoration: underline; /* Underlines the text on hover */
+}
